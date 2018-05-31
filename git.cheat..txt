@@ -1,0 +1,24 @@
+-- Set user name that every commit will use for every project.
+git config --global user.name "Mark MacKenzie"
+
+-- Set user name that every commit will use for just the current project.
+git config user.name "Mark MacKenzie"
+
+-- Set email address that every commit will use for every project.
+git config --global user.email mm800b@markmackenzie.com
+
+-- Set email address that every commit will use for just the current project.
+git config user.email mm800b@markmackenzie.com
+
+
+
+-- check all the configuration setting Git can find.  NOTE: Git uses the last value for each unique key it sees
+git config --list
+
+-- check a specific configuration setting.  NOTE: Git uses the last value for each unique key it sees
+git config user.name
+git config user.email
+etc...
+
+-- check a specific configuration setting and then show the path of the config file in which Git retrieved the value.
+git config --show-origin user.name
