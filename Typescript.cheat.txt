@@ -1,0 +1,4 @@
+npm install -g typescript      // Install Typescript globally
+
+tsc --init                     // Initiallizes a Typescript project by creating a tsconfig.json file (run this command after changing to project dir)
+
