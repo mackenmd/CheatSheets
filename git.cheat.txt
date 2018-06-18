@@ -25,3 +25,4 @@ git commit -a -m 'This is the commit message.  No file staging required'  // Com
 git clone https://github.com/mackenmd/GitTestArea.git         // Clone the repository located at https://github.com/mackenmd/GitTestArea.git to the subfolder GitTestArea
 git clone https://github.com/mackenmd/GitTestArea.git GitTest // Clone the repository located at https://github.com/mackenmd/GitTestArea.git to the subfolder GitTest
 
+git mv OldfFileName.txt NewFileName.txt        // Rename the file and stage the change for commit 
