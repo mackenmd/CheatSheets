@@ -1,24 +1,27 @@
--- Set user name that every commit will use for every project.
-git config --global user.name "Mark MacKenzie"
+git config --global user.name "Mark MacKenzie"            // Set user name     that every commit will use for every            project.
+git config          user.name "Mark MacKenzie"            // Set user name     that every commit will use for just the current project.
+git config --global user.email mm800b@markmackenzie.com   // Set email address that every commit will use for every            project.
+git config          user.email mm800b@markmackenzie.com   // Set email address that every commit will use for just the current project.
 
--- Set user name that every commit will use for just the current project.
-git config user.name "Mark MacKenzie"
+git config --list                     // check all the    configuration settings Git can find.  NOTE: Git uses the last value for each unique key it sees.
+git config user.name                  // check a specific configuration setting.                NOTE: Git uses the last value                     it sees.
+git config --show-origin user.name    // check a specific configuration setting and then show the path of the config file in which Git retrieved the value.
 
--- Set email address that every commit will use for every project.
-git config --global user.email mm800b@markmackenzie.com
+git help checkout        // Get the full manual help page for a specific command
+git      checkout -h     // Get quick refresher help      for a specific command
 
--- Set email address that every commit will use for just the current project.
-git config user.email mm800b@markmackenzie.com
+git init                 // Initialize a new repository.  Do this after changing to the path you wish to locate the repository.
 
+git status               // Get status on all the files in the working directory
 
+git add .                                    // Add all new and changed            files to the staging area
+git add *.js                                 // Add all new and changed Javascript files to the staging area
 
--- check all the configuration setting Git can find.  NOTE: Git uses the last value for each unique key it sees
-git config --list
+git commit                                                                // Invokes vim editor to enter comment.  Once in editor: 1) I 2) comment 3) <esc> 4) :wq <enter>
+git commit    -m 'This is the commit message'                             // Commit all staged files and provide a log message
+git commit    -m 'Commit message Line 1' -m 'Commit message Line 3'       // Commit all staged files and provide a log message with two lines (blank line between them)
+git commit -a -m 'This is the commit message.  No file staging required'  // Commit all        files and provide a log message without requiring them to be staged first. 
 
--- check a specific configuration setting.  NOTE: Git uses the last value for each unique key it sees
-git config user.name
-git config user.email
-etc...
+git clone https://github.com/mackenmd/GitTestArea.git         // Clone the repository located at https://github.com/mackenmd/GitTestArea.git to the subfolder GitTestArea
+git clone https://github.com/mackenmd/GitTestArea.git GitTest // Clone the repository located at https://github.com/mackenmd/GitTestArea.git to the subfolder GitTest
 
--- check a specific configuration setting and then show the path of the config file in which Git retrieved the value.
-git config --show-origin user.name
